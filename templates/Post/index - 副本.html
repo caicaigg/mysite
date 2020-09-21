@@ -1,0 +1,226 @@
+<!DOCTYPE html>
+{% load static %}
+<html lang="zh-CN">
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <!-- 上述3个meta标签*必须*放在最前面，任何其他内容都*必须*跟随其后！ -->
+    <meta name="description" content="">
+    <meta name="author" content="">
+    <link rel="icon" href="{% static 'Post/img/favicon.jpg' %}">
+
+    <title>阿联酋酋长</title>
+
+    <!-- Bootstrap core CSS -->
+    <link href="https://cdn.bootcss.com/bootstrap/3.3.7/css/bootstrap.min.css" rel="stylesheet">
+
+    <!-- Custom styles for this template -->
+    <link href="{% static 'Post/css/index.css' %}" rel="stylesheet">
+
+    <!-- HTML5 shim and Respond.js for IE8 support of HTML5 elements and media queries -->
+    <!--[if lt IE 9]>
+    <script src="https://cdn.bootcss.com/html5shiv/3.7.3/html5shiv.min.js"></script>
+    <script src="https://cdn.bootcss.com/respond.js/1.4.2/respond.min.js"></script>
+    <![endif]-->
+</head>
+
+<!-- Javascript goes in the document HEAD -->
+<script type="text/javascript">
+function altRows(id){
+    if(document.getElementsByTagName){
+
+        var table = document.getElementById(id);
+        var rows = table.getElementsByTagName("tr");
+
+        for(i = 0; i < rows.length; i++){
+            if(i % 2 == 0){
+                rows[i].className = "evenrowcolor";
+            }else{
+                rows[i].className = "oddrowcolor";
+            }
+        }
+    }
+}
+
+window.onload=function(){
+    altRows('alternatecolor');
+}
+</script>
+
+<!-- CSS goes in the document HEAD or added to your external stylesheet -->
+<style type="text/css">
+table.altrowstable {
+    font-family: verdana,arial,sans-serif;
+    font-size:11px;
+    color:#333333;
+    border-width: 1px;
+    border-color: #a9c6c9;
+    border-collapse: collapse;
+}
+table.altrowstable th {
+    border-width: 1px;
+    padding: 8px;
+    border-style: solid;
+    border-color: #a9c6c9;
+}
+table.altrowstable td {
+    border-width: 1px;
+    padding: 8px;
+    border-style: solid;
+    border-color: #a9c6c9;
+}
+.oddrowcolor{
+    background-color:#d4e3e5;
+}
+.evenrowcolor{
+    background-color:#c3dde0;
+}
+</style>
+
+<body>
+
+<nav class="navbar navbar-inverse navbar-fixed-top">
+    <div class="container">
+        <div class="navbar-header">
+            <img src="{% static 'Post/img/favicon.jpg' %}"/>
+            <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#navbar"
+                    aria-expanded="false" aria-controls="navbar">
+                <span class="sr-only">Toggle navigation</span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+            </button>
+
+            <a class="navbar-brand" href="#">阿联酋酋长's blog</a>
+            <a class="navbar-brand" href="#">博客</a>
+            <a class="navbar-brand" href="#">嘻嘻</a>
+            <a class="navbar-brand" href="#">哈哈</a>
+        </div>
+        <div id="navbar" class="navbar-collapse collapse">
+            <form class="navbar-form navbar-right">
+                <div class="form-group">
+                    <input type="text" placeholder="Email" class="form-control">
+                </div>
+                <div class="form-group">
+                    <input type="password" placeholder="Password" class="form-control">
+                </div>
+                <button type="submit" class="btn btn-success">Sign in</button>
+            </form>
+        </div><!--/.navbar-collapse -->
+    </div>
+</nav>
+
+<h4>测试表格</h4>
+<!DOCTYPE html >
+<html >
+<head>
+<meta charset="utf-8" />
+<title>可编辑表格</title>
+<script>
+function addRow(){
+    var oTable = document.getElementById("oTable");
+    var tBodies = oTable.tBodies;
+    var tbody = tBodies[0];
+    var tr = tbody.insertRow(tbody.rows.length);
+    var td_1 = tr.insertCell(0);
+    td_1.innerHTML = "<div contenteditable='true'>第1列</div>";
+    var td_2 = tr.insertCell(1);
+    td_2.innerHTML = "<div contenteditable='true'>第2列</div>";
+    }
+
+</script>
+</head>
+<body>
+<fieldset>
+<legend>可编辑的表格</legend>
+<table id="oTable" style="background-color:#eeeeee;" bordercolor="#aaaaaa" border="1" cellpadding="0" cellpadding="2" width="100%">
+<thead>
+<tr>
+<th>第一列标题</th>
+<th>第二列标题</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><div contenteditable="true">第一行第一列</div></td>
+<td><div contenteditable="true">第一行第二列</div></td>
+</tr>
+</tbody>
+</table>
+</fieldset>
+<input type="button" onClick="addRow();" style="font-size:16px;" value="+"/>
+</body>
+</html>
+{##}
+{#<table class="altrowstable" id="alternatecolor" border="1" cellspacing="30">#}
+{#    <tr>#}
+{#        <td>周一</td>#}
+{#        <td>周二</td>#}
+{#        <td>周三</td>#}
+{#        <td>周四</td>#}
+{#        <td>周五</td>#}
+{#        <td>周六</td>#}
+{#        <td>周日</td>#}
+{#    </tr>#}
+{#        <tr>#}
+{#        <td>周一</td>#}
+{#        <td>周二</td>#}
+{#        <td>周三</td>#}
+{#        <td>周四</td>#}
+{#        <td>周五</td>#}
+{#        <td>周六</td>#}
+{#        <td>周日</td>#}
+{#    </tr>#}
+{#        <tr>#}
+{#        <td>周一</td>#}
+{#        <td>周二</td>#}
+{#        <td>周三</td>#}
+{#        <td>周四</td>#}
+{#        <td>周五</td>#}
+{#        <td>周六</td>#}
+{#        <td>周日</td>#}
+{#    </tr>#}
+{#</table>#}
+
+<!-- Main jumbotron for a primary marketing message or call to action -->
+<div class="jumbotron">
+    <div class="container">
+        <h1>Hello, world!</h1>
+        <p>This is a template for a simple marketing or informational website. It includes a large callout called a
+            jumbotron and three supporting pieces of content. Use it as a starting point to create something more
+            unique.</p>
+        <p><a class="btn btn-primary btn-lg" href="#" role="button">Learn more &raquo;</a></p>
+        <img src="{% static 'Post/img/first.jpg' %}">
+    </div>
+</div>
+
+<div class="container">
+    <!-- Example row of columns -->
+    <div class="row">
+        {% for post in new_post_list %}
+        <div class="col-md-4">
+            <h2>{{ post.title }}</h2>
+            <p>{{ post.body | truncatewords:"2" | safe }}</p>
+            <p><a class="btn btn-default" href="#" role="button">View details &raquo;</a></p>
+        </div>
+        {% endfor %}
+    </div>
+
+    <hr>
+
+    <footer>
+        <p>&copy; 2016 Company, Inc.</p>
+    </footer>
+</div> <!-- /container -->
+
+
+<!-- Bootstrap core JavaScript
+================================================== -->
+<!-- Placed at the end of the document so the pages load faster -->
+{#<script src="https://cdn.bootcss.com/jquery/1.12.4/jquery.min.js"></script>#}
+{#<script>window.jQuery || document.write('<script src="../../assets/js/vendor/jquery.min.js"><\/script>')</script>#}
+{#<script src="https://cdn.bootcss.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>#}
+</body>
+</html>
+
